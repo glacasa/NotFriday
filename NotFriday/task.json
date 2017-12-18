@@ -1,0 +1,45 @@
+{
+    "id": "DCCAB19C-1662-47DB-A322-B3E411B5F4D0",
+    "name": "NotFriday",
+    "friendlyName": "Not Friday",
+    "description": "Don't release if it's friday",
+    "helpMarkDown": "",
+    "category": "Utility",
+    "author": "glacasa",
+    "version": {
+        "Major": 0,
+        "Minor": 0,
+        "Patch": 1
+    },
+    "instanceNameFormat": "NotFriday",
+    "groups": [
+        {
+            "name": "advanced",
+            "displayName": "Advanced",
+            "isExpanded": false
+        }
+    ],
+    "inputs": [
+        {
+            "name": "checkfriday",
+            "type": "boolean",
+            "label": "Bloquer le déploiement le vendredi",
+            "defaultValue": "true",
+            "required": false,
+            "helpMarkDown": "Si la case est cochée, la tâche sera en erreur les veilles de week-end."
+        },
+        {
+            "name": "checkholiday",
+            "type": "boolean",
+            "label": "Bloquer le déploiement les veilles de jours fériés",
+            "defaultValue": "false",
+            "required": false,
+            "helpMarkDown": "Si la case est cochée, la tâche sera en erreur si les veilles de jour fériés."
+        }
+    ],
+    "execution": {
+        "Node": {
+            "target": "index.js"
+        }
+    }
+}
